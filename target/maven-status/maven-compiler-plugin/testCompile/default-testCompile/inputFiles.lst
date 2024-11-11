@@ -1,0 +1,5 @@
+/root/ecommerce-store/src/test/java/com/ecommerce/store/services/OrderServiceTest.java
+/root/ecommerce-store/src/test/java/com/ecommerce/store/controllers/ProductControllerTest.java
+/root/ecommerce-store/src/test/java/com/ecommerce/store/services/ProductServiceTest.java
+/root/ecommerce-store/src/test/java/com/ecommerce/store/controllers/OrderControllerTest.java
+/root/ecommerce-store/src/test/java/com/ecommerce/store/StoreApplicationTests.java

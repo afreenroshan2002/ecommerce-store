@@ -1,0 +1,7 @@
+com/ecommerce/store/StoreApplicationTests.class
+com/ecommerce/store/services/OrderServiceTest$OrderServiceTestContextConfiguration.class
+com/ecommerce/store/services/ProductServiceTest.class
+com/ecommerce/store/services/OrderServiceTest.class
+com/ecommerce/store/services/ProductServiceTest$ProductServiceTestContextConfiguration.class
+com/ecommerce/store/controllers/ProductControllerTest.class
+com/ecommerce/store/controllers/OrderControllerTest.class
