@@ -99,17 +99,3 @@ java -jar ecommerce-store-application.jar
 
 Swagger is included in the project. Hence, the API documentation is available at http://localhost:8080/swagger-ui.html. 
 
-## Questions on Extensibility
-
-1. You do not need to add authentication to your web service, but propose a protocol / method and
-justify your choice.
-
-We could use OAuth2 and JWT based authentication which is quite straightforward to implement by adding appropriate Spring Security dependencies. Also, this is convenient as there might be multiple clients using this service in a real-world scenario (https://www.toptal.com/spring/spring-boot-oauth2-jwt-rest-protection).
-An alternate approach is to use an identity provider like Okta, Auth0 etc., if that's an allowed use-case.
-
-2. How can you make the service redundant? What considerations should you do?
-
-The concurrency part is handled using Optimistic Locking, specifically for the update of the Products. It would be ideal to add additional mechanisms like an "ETag" - "If-Match" header support.
-Also, configuration (including passwords) is currently packaged along with the generated artifact; it would be better to use a separate Spring Cloud Config service in a scenario where the architecture is based on Microservices. 
-
-
