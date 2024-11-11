@@ -52,6 +52,12 @@ have already been placed.
 
 - Travis (CI)
 
+## Clone the Repository
+Navigate to the directory where you want to clone the project and run:
+```bash
+git clone git@github.com:afreenroshan2002/ecommerce-store.git
+cd ecommerce-store
+```
 ## Building the Application
 
 As the project uses Maven as the build system, just run the below command in the project directory -
