@@ -97,5 +97,5 @@ java -jar ecommerce-store-application.jar
 
 ## Accessing the API Documentation
 
-Swagger is included in the project. Hence, the API documentation is available at http://localhost:8080/swagger-ui.html. 
+Swagger is included in the project. Hence, the API documentation is available at http://localhost:8080/api/v1
 
