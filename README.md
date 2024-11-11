@@ -44,15 +44,11 @@ have already been placed.
 
 ### Tools Used
 
-- Java 8
+- Java 11
 
 - Spring Boot v2.2.4.RELEASE
 
-- PostgreSQL v10
-
 - Maven
-
-- Docker
 
 - Travis (CI)
 
@@ -66,11 +62,7 @@ mvn clean install
 
 The name of the generated JAR is `ecommerce-store-application.jar`.
 
-To build the Dockerfile as well (make sure that the Docker daemon is running) -
 
-```bash
-mvn clean install dockerfile:build
-```
 
 *NOTE:* Maven is configured with `dockerfile-maven-plugin` for building the Docker image
 
@@ -100,21 +92,6 @@ Once you build the Application, the artifacts will be generated and copied to `t
 java -jar ecommerce-store-application.jar
 ```
 
-### Using Docker
-
-If you have generated the Docker image in the build step, use the below command to run the Application on Docker -
-
-```bash
-docker-compose up
-```
-
-To tail the logs, just run -
-
-```bash
-docker-compose logs -f
-```
-
-*NOTE:* The Spring profile used while running with Docker is `production`. This requires PostgreSQL to be running, which is already configured in the Docker Compose file.
 
 ## Accessing the API Documentation
 
@@ -133,9 +110,4 @@ An alternate approach is to use an identity provider like Okta, Auth0 etc., if t
 The concurrency part is handled using Optimistic Locking, specifically for the update of the Products. It would be ideal to add additional mechanisms like an "ETag" - "If-Match" header support.
 Also, configuration (including passwords) is currently packaged along with the generated artifact; it would be better to use a separate Spring Cloud Config service in a scenario where the architecture is based on Microservices. 
 
-## To Do
 
-1. Try finding an alternative to using `wait-for-postgres.sh`; it currently requires PostgreSQL client to be installed on the Docker container.
-2. Improve tests & coverage.
-3. Add pagination to "fetch" APIs.
-4. "User" is not included in the implemented model; that's something to be considered in a real-world scenario.
