@@ -38,7 +38,6 @@ have already been placed.
 
 - Provide a storage solution for persisting the web service’s state.
 
-- Have a way to run the service with its dependencies (database etc) locally. You can use either a simple script or docker or something else. It’s up to you.
 
 ## Solution Overview
 
@@ -68,9 +67,6 @@ mvn clean install
 
 The name of the generated JAR is `ecommerce-store-application.jar`.
 
-
-
-*NOTE:* Maven is configured with `dockerfile-maven-plugin` for building the Docker image
 
 ### Running Tests
 
